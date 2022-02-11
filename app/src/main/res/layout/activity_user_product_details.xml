@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sellerbackgroundcolor"
+    tools:context=".CartItems">
+    <RelativeLayout
+        android:id="@+id/userProductImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewProduct"
+            android:layout_width="280dp"
+            android:layout_height="232dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/ic_baseline_add_photo_alternate_24" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/productName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/userProductImageView"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/productNameUserLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:text="Title:"
+            android:textColor="#E6E6FA"
+            android:textSize="19sp" />
+        <TextView
+            android:id="@+id/productNameUserRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:textColor="#E6E6FA"
+            android:layout_toRightOf="@+id/productNameUserLeft"
+            android:layout_marginLeft="10dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/descriptionProduct1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/productName"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/descriptionProductLeft1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:text="Description:"
+            android:textColor="#E6E6FA"
+            android:textSize="19sp" />
+        <TextView
+            android:id="@+id/descriptionProductRight1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:textColor="#E6E6FA"
+            android:layout_toRightOf="@+id/descriptionProductLeft1"
+            android:layout_marginLeft="10dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionProduct1"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/priceLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:text="Price: $"
+            android:textColor="#E6E6FA"
+            android:textSize="19sp" />
+        <TextView
+            android:id="@+id/priceRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:textColor="#E6E6FA"
+            android:layout_toRightOf="@+id/priceLeft"
+            android:layout_marginLeft="10dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/adminFullNameDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/price"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/adminFullNameLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:text="Seller:"
+            android:textColor="#E6E6FA"
+            android:textSize="19sp" />
+        <TextView
+            android:id="@+id/adminFullNameRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:textColor="#E6E6FA"
+            android:layout_toRightOf="@+id/adminFullNameLeft"
+            android:layout_marginLeft="10dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/ratingUserDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/adminFullNameDetails"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/ratingUserLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:text="Рејтинг:"
+            android:textColor="#E6E6FA"
+            android:textSize="19sp" />
+        <TextView
+            android:id="@+id/ratingUserRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:textColor="#E6E6FA"
+            android:layout_toRightOf="@+id/ratingUserLeft"
+            android:layout_marginLeft="10dp"/>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/addToCart"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Order"
+        app:layout_constraintTop_toBottomOf="@+id/ratingUserDetails"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:backgroundTint="#00FF00"
+        android:textColor="#4B0082"
+        android:textSize="21sp"
+        android:layout_marginTop="30dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

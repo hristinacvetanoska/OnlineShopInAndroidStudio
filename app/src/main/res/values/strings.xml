@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">NewAndroidApp</string>
+    <string name="email_address">Email Address</string>
+    <string name="Title">OnlineShop</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="not_registered">Not registered?</string>
+    <string name="register">Register</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="create_account">Create Account!</string>
+    <string name="full_name">Full Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="admin">Admin</string>
+    <string name="user">User</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="add_new_product">Add new product</string>
+    <string name="ProductTitle">Title</string>
+    <string name="add_product">Add Product</string>
+    <string name="available">Available</string>
+    <string name="newOrders">New Orders</string>
+    <string name="shipped">Shipped</string>
+    <string name="orderReceived">Orders received</string>
+
+
+
+    <string-array name="usersType">
+        <item>@string/admin</item>
+        <item>@string/user</item>
+    </string-array>
+    <string-array name="filterByStatus">
+        <item>@string/available</item>
+        <item>@string/newOrders</item>
+        <item>@string/shipped</item>
+        <item>@string/orderReceived</item>
+
+    </string-array>
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "238080872077",
+    "project_id": "onlineshop-809b3",
+    "storage_bucket": "onlineshop-809b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:238080872077:android:d0c1255114e63bf0261cc4",
+        "android_client_info": {
+          "package_name": "com.example.newandroidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "238080872077-nc7p9ii1aqnu7icvplucci6mhk2j4grd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhwV6W6IgSTDCmTd5-huQvFBc2UQ-i0y0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "238080872077-nc7p9ii1aqnu7icvplucci6mhk2j4grd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
