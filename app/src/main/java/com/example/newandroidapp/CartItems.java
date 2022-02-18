@@ -62,12 +62,10 @@ public class CartItems extends AppCompatActivity {
                             emailAdmin = postSnapshot.child("email").getValue().toString();
                             phoneNumberAdmin = postSnapshot.child("PhoneNumber").getValue().toString();
                             title = postSnapshot.child("pname").getValue().toString();
-                            //password = postSnapshot.child("Password").getValue().toString();
                         }
                         intent.putExtra("title",title);
                         intent.putExtra("email",emailAdmin);
                         intent.putExtra("phoneNumber",phoneNumberAdmin);
-                        //intent.putExtra("password", password);
                         startActivity(intent);
                     }
 

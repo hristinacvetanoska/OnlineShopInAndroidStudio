@@ -101,11 +101,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                                 startActivity(intent);
                             }
-                            else {
-                                Toast.makeText(MainActivity.this, "Не постои таква улога!!!!", Toast.LENGTH_SHORT).show();
-
-                            }
-
 
                         } else {
                             Toast.makeText(MainActivity.this, "Не постои таков корисник!!!", Toast.LENGTH_SHORT).show();

@@ -29,10 +29,6 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.ViewHolder> {
     private Context mContext;
     private String celoIme, description, title, rastojanie, rejting, lat, lon, email, price, imageUrl;
 
-    // Референца на views за секој податок
-    // Комплексни податоци може да бараат повеќе views per item
-    // Пристап до сите views за податок се дефинира во view holder
-
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView myName;
@@ -45,7 +41,6 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.ViewHolder> {
         }
     }
 
-    // конструктор
     public myAdapter(List<String> myList, ArrayList<String> photoList, String email, int rowLayout, Context context) {
         this.myList = myList;
         this.photoList = photoList;
@@ -54,14 +49,12 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.ViewHolder> {
         this.mContext = context;
     }
 
-    // Креирање нови views (повикано од layout manager)
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(rowLayout, viewGroup, false);
         return new ViewHolder(v);
     }
 
-    // Замена на содржината во view (повикано од layout manager)
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
         String entry = myList.get(i);
@@ -69,8 +62,6 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.ViewHolder> {
         viewHolder.myName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /* TextView tv = (TextView) v;
-                Toast.makeText(mContext, tv.getText(), Toast.LENGTH_SHORT).show();*/
                 String[] niza = myList.get(i).split(" - ");
                 String productName = niza[0];
                 Intent intent = new Intent(mContext,UserProductDetails.class);
@@ -106,12 +97,9 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.ViewHolder> {
                 });
             }
         });
-        //Picasso.get(photoList.get(i)).load(viewHolder.Pic);
         Picasso.get().load(photoList.get(i)).into(viewHolder.Pic);
-       // viewHolder.Pic.setImageResource(Integer.parseInt(photoList.get(i)));
     }
 
-    // Пресметка на големината на податочното множество (повикано од layout manager)
     @Override
     public int getItemCount() {
         return myList == null ? 0 : myList.size();

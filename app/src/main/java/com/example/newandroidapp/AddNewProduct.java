@@ -1,10 +1,7 @@
 package com.example.newandroidapp;
 
-import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.location.LocationRequest;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,16 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -100,6 +92,7 @@ public class AddNewProduct extends AppCompatActivity{
             ImageUri = data.getData();
             imageView.setImageURI(ImageUri);
         }
+
     }
     private void ValidateProductData() {
         Description = InputProductDescription.getText().toString();
@@ -189,20 +182,17 @@ public class AddNewProduct extends AppCompatActivity{
         productMap.put("time", saveCurrentTime);
         productMap.put("description", Description);
         productMap.put("image", downloadImageUrl);
-        //productMap.put("category", CategoryName);
         productMap.put("price", Price);
         productMap.put("pname", Pname);
         productMap.put("admin", Admin);
         productMap.put("email", email);
         productMap.put("Status","Available");
 
-        //productMap.put("RatingOfUser",rating);
         productMap.put("EmailOfUser","");
         productMap.put("FullNameUser","");
         productMap.put("PhoneNumber", getIntent().getStringExtra("phoneNumber"));
         productMap.put("PhoneNumberUser","");
         productMap.put("DescriptionForAdmin","");
-        productMap.put("DescriptionForUser","");
         productMap.put("RateForAdmin",0);
         productMap.put("RateOfAdmin",getIntent().getStringExtra("rating"));
         productMap.put("RatingOfUser",0);
@@ -232,22 +222,4 @@ public class AddNewProduct extends AppCompatActivity{
     }
 
 
-   /* @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == Place_Picker_Request) {
-            if (resultCode == RESULT_OK) {
-                Place place = PlacePicker.getPlace(data, this);
-                StringBuilder stringBuilder = new StringBuilder();
-                String latitude = String.valueOf(place.getLatLng().latitude);
-                String longitude = String.valueOf(place.getLatLng().longitude);
-                stringBuilder.append("LATITUDE: ");
-                stringBuilder.append(latitude);
-                stringBuilder.append("\n");
-                stringBuilder.append("LONGITUDE");
-                stringBuilder.append(longitude);
-                textView.setText(stringBuilder.toString());
-            }
-        }
-    }*/
 }

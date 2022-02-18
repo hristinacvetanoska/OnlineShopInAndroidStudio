@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sellerbackgroundcolor"
+    android:background="@drawable/color_background"
     tools:context=".CartItems">
     <RelativeLayout
         android:id="@+id/userProductImageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
             android:id="@+id/imageViewProduct"
@@ -146,12 +148,48 @@
             android:layout_toRightOf="@+id/ratingUserLeft"
             android:layout_marginLeft="10dp"/>
     </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="15dp"
+        android:text="Choose city"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingUserDetails" />
+
+    <Spinner
+        android:id="@+id/spinnerCity"
+        android:layout_width="380dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:textAlignment="center"
+        android:entries="@array/cityList"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingUserDetails" />
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Write your address"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="#E6E6FA"
+        android:textSize="19sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCity"
+        android:layout_marginTop="10dp"/>
+
     <Button
         android:id="@+id/addToCart"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:text="Order"
-        app:layout_constraintTop_toBottomOf="@+id/ratingUserDetails"
+        app:layout_constraintTop_toBottomOf="@+id/address"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:backgroundTint="#00FF00"

@@ -5,7 +5,7 @@
         android:startColor="#40E0D0"
         android:endColor="#FF69B4"
         android:angle="-270" />
-    <corners android:bottomLeftRadius="300dp"
+    <corners android:topRightRadius="1500dp"
         />
 
 

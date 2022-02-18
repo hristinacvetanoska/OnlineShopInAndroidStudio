@@ -37,12 +37,10 @@ public class Seller extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v){
         switch (v.getId()){
             case R.id.addNewProduct:
-                //startActivity(new Intent(this, AddNewProduct.class));
                 addProductActivity();
                 break;
             case R.id.viewProducts:
                 viewProductsActivity();
-                //startActivity(new Intent(this, ViewProducts.class));
                 break;
             case R.id.logOut:
                 startActivity(new Intent(this, MainActivity.class));

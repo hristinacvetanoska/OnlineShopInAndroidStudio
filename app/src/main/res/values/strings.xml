@@ -21,7 +21,25 @@
     <string name="newOrders">New Orders</string>
     <string name="shipped">Shipped</string>
     <string name="orderReceived">Orders received</string>
+    <string name="eshop">eShop</string>
 
+    <string name="Skopje">Skopje</string>
+    <string name="Kicevo">Kicevo</string>
+    <string name="Bitola">Bitola</string>
+    <string name="Ohrid">Ohrid</string>
+    <string name="Struga">Struga</string>
+    <string name="Gevgelija">Gevgelija</string>
+    <string name="Tetovo">Tetovo</string>
+    <string name="Veles">Veles</string>
+    <string name="Stip">Stip</string>
+    <string name="Gostivar">Gostivar</string>
+    <string name="Strumica">Strumica</string>
+    <string name="Kavadarci">Kavadarci</string>
+    <string name="DemirHisar">Demir Hisar</string>
+    <string name="Prilep">Prilep</string>
+    <string name="Debar">Debar</string>
+    <string name="Kumanovo">Kumanovo</string>
+    <string name="MakedonksiBrod">Makedonksi Brod</string>
 
 
     <string-array name="usersType">
@@ -33,6 +51,26 @@
         <item>@string/newOrders</item>
         <item>@string/shipped</item>
         <item>@string/orderReceived</item>
+
+    </string-array>
+    <string-array name="cityList">
+        <item>@string/Skopje</item>
+        <item>@string/Kicevo</item>
+        <item>@string/Bitola</item>
+        <item>@string/Ohrid</item>
+        <item>@string/Struga</item>
+        <item>@string/Gevgelija</item>
+        <item>@string/Tetovo</item>
+        <item>@string/Veles</item>
+        <item>@string/Stip</item>
+        <item>@string/Gostivar</item>
+        <item>@string/Strumica</item>
+        <item>@string/Kavadarci</item>
+        <item>@string/DemirHisar</item>
+        <item>@string/Prilep</item>
+        <item>@string/Debar</item>
+        <item>@string/Kumanovo</item>
+        <item>@string/MakedonksiBrod</item>
 
     </string-array>
 </resources>

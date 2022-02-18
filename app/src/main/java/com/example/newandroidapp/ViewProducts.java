@@ -29,7 +29,7 @@ public class ViewProducts extends AppCompatActivity{
     ListView lista;
     Spinner spin;
     FirebaseAuth auth=FirebaseAuth.getInstance();
-    String productName, productDescription, productPrice, Admin, data, time, status,image, fullNameOfUser, emailofUser,ratingOfUser, phoneNumberOfUser;
+    String productName, productDescription, productPrice, Admin, data, time, status,image, fullNameOfUser, emailofUser, city, address;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +50,6 @@ public class ViewProducts extends AppCompatActivity{
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         for (DataSnapshot postSnapshot:snapshot.getChildren()){
-                            //String imageUrl = postSnapshot.child("image").getValue().toString();
                             String status = postSnapshot.child("Status").getValue().toString();
                             if(result.equals("Orders received")){
                                 if(status.equals("Order received")){
@@ -120,8 +119,8 @@ public class ViewProducts extends AppCompatActivity{
                             image = postSnapshot.child("image").getValue().toString();
                             fullNameOfUser = postSnapshot.child("FullNameUser").getValue().toString();
                             emailofUser = postSnapshot.child("EmailOfUser").getValue().toString();
-                            ratingOfUser = postSnapshot.child("RatingOfUser").getValue().toString();
-                            phoneNumberOfUser = postSnapshot.child("PhoneNumberUser").getValue().toString();
+                            city = postSnapshot.child("CityOfUser").getValue().toString();
+                            address = postSnapshot.child("AddressOfUser").getValue().toString();
                         }
                         intent.putExtra("Title",productName);
                         intent.putExtra("description",productDescription);
@@ -133,8 +132,10 @@ public class ViewProducts extends AppCompatActivity{
                         intent.putExtra("imageUrl", image);
                         intent.putExtra("FullNameUser",fullNameOfUser);
                         intent.putExtra("EmailOfUser",emailofUser);
-                        intent.putExtra("RatingOfUser", ratingOfUser);
-                        intent.putExtra("phoneNumberUser",phoneNumberOfUser);
+                        intent.putExtra("city", city);
+                        intent.putExtra("address", address);
+
+                        //intent.putExtra("phoneNumberUser",phoneNumberOfUser);
 
                         startActivity(intent);
                     }

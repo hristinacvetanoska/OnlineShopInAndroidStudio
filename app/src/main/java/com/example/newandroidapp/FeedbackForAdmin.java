@@ -43,7 +43,6 @@ public class FeedbackForAdmin extends AppCompatActivity {
         emailAdmin = intent.getStringExtra("email");
         phoneNumberOfAdmin = intent.getStringExtra("phoneNumber");
         title = intent.getStringExtra("title");
-        //String password = intent.getStringExtra("Password");
 
         emailDesno.setText(emailAdmin);
         telefonDesno.setText(phoneNumberOfAdmin);

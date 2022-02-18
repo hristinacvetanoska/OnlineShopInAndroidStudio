@@ -15,15 +15,13 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class LocationActivity extends FragmentActivity implements OnMapReadyCallback{
         private GoogleMap mMap;
-        //private ActivityLocationBinding binding;
         private double lat, lon;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
-            /*binding = ActivityLocationBinding.inflate(getLayoutInflater());
-            setContentView(binding.getRoot());*/
+
 
             Intent intent = getIntent();
             lat = intent.getDoubleExtra("Lat",0);

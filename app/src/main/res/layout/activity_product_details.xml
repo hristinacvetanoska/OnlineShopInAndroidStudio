@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProductDetails"
-    android:background="@drawable/sellerbackgroundcolor">
+    android:background="@drawable/color_background">
     <RelativeLayout
         android:id="@+id/imageViewproductDetails"
         android:layout_width="wrap_content"
@@ -222,6 +222,31 @@
             android:layout_toRightOf="@+id/emailUserLeft"
             android:layout_marginLeft="10dp"/>
     </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/addressUserDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/emailUserDetails"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/addressUserLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:text="User's address:"
+            android:textColor="#E6E6FA"
+            android:textSize="19sp" />
+        <TextView
+            android:id="@+id/addressUserRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:textColor="#E6E6FA"
+            android:layout_toRightOf="@+id/addressUserLeft"
+            android:layout_marginLeft="10dp"/>
+    </RelativeLayout>
     <Button
         android:id="@+id/prifati"
         android:layout_width="wrap_content"
@@ -230,7 +255,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="17sp"
-        app:layout_constraintTop_toBottomOf="@+id/emailUserDetails"
+        app:layout_constraintTop_toBottomOf="@+id/addressUserDetails"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/otkazi"
         android:backgroundTint="#57c84d"
@@ -243,7 +268,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="17sp"
-        app:layout_constraintTop_toBottomOf="@+id/emailUserDetails"
+        app:layout_constraintTop_toBottomOf="@+id/addressUserDetails"
         app:layout_constraintLeft_toRightOf="@+id/prifati"
         app:layout_constraintRight_toRightOf="parent"
         android:backgroundTint="#FF0000"
