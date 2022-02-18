@@ -1,5 +1,6 @@
 package com.example.newandroidapp;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -56,7 +57,7 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(ViewHolder viewHolder, @SuppressLint("RecyclerView") int i) {
         String entry = myList.get(i);
         viewHolder.myName.setText(entry);
         viewHolder.myName.setOnClickListener(new View.OnClickListener() {

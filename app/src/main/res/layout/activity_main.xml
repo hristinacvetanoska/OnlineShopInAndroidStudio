@@ -11,7 +11,8 @@
         android:layout_width="418dp"
         android:layout_height="500dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:background="@drawable/header_bg">
+        android:background="@drawable/header_bg"
+        tools:ignore="MissingConstraints">
 
     </View>
 

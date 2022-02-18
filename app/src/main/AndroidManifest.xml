@@ -13,17 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NewAndroidApp">
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDRTGm0G3l05gqERvOPvsj_f2b02KkynKY" />
+
         <activity
             android:name=".FeedbackConfirm"
             android:exported="false" />
-        <activity
-            android:name=".LocationActivity"
-            android:exported="false">
-
-        </activity>
         <activity
             android:name=".FeedbackForAdmin"
             android:exported="false" />

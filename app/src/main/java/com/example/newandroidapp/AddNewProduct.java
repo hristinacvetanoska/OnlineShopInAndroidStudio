@@ -189,6 +189,9 @@ public class AddNewProduct extends AppCompatActivity{
         productMap.put("Status","Available");
 
         productMap.put("EmailOfUser","");
+        productMap.put("CityOfUser","");
+        productMap.put("AddressOfUser","");
+
         productMap.put("FullNameUser","");
         productMap.put("PhoneNumber", getIntent().getStringExtra("phoneNumber"));
         productMap.put("PhoneNumberUser","");

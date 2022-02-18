@@ -124,6 +124,8 @@ public class ProductDetails extends AppCompatActivity {
                 emailUserDesno.setVisibility(View.GONE);
                 userLeft.setVisibility(View.GONE);
                 emailUserLeft.setVisibility(View.GONE);
+                addresUserLeft.setVisibility(View.GONE);
+                addresUserRight.setVisibility(View.GONE);
                 FirebaseDatabase.getInstance()
                         .getReference("Products").orderByChild("pname").equalTo(nameOfProduct).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
